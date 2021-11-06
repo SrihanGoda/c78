@@ -1,20 +1,35 @@
-var images = ["https://as2.ftcdn.net/jpg/01/15/47/87/500_F_115478791_GG0yIcVA8Mhe6MAXEvgcfyL7JtuVfYvm.jpg", "https://lh3.googleusercontent.com/proxy/viy7XjvLGbz3z_OaAyS5c5E6ihzsoMK-mMCr9Hza2QN3-BmwgA1NOmV50Q2wrGNjphTA8OhEP7IDBcZM_wpr3uKAVDDzyLKHHvpyGqA9BQ", "https://previews.123rf.com/images/yupiramos/yupiramos1712/yupiramos171207137/91230755-young-girl-kid-character-standing-cartoon-vector-illustration.jpg", "family.png"];
-var names = ["Mom", "Dad", "Me", "Us"];
-var i = 0;
+var members = [
+  "https://jerrymahoney.files.wordpress.com/2013/06/familybook.png", 
+  "https://whjr-v2-prod-bucket.s3.ap-south-1.amazonaws.com/1fed80b4-2660-4cba-8db2-f13cd8bd4ad3.jpg", 
+  "https://cdn3.iconfinder.com/data/icons/family-member-flat-happy-family-day/512/Brother-512.png", 
+  "https://us.123rf.com/450wm/yupiramos/yupiramos1905/yupiramos190505227/122760736-stock-vector-little-girl-avatar-character-vector-illustration-design.jpg?ver=6", 
+  "https://www.clipartkey.com/mpngs/m/145-1456201_female-using-smartphone-mom-and-baby-cartoon-png.png", 
+  "https://thumbs.dreamstime.com/b/print-175056460.jpg"
+  ];
 
-function update(){
+  var names = [
+  "My Family-Book", 
+  "srihan goda", 
+  "dad", 
+  "mom", 
+  "sister", 
+  ""
+  ];
 
-  var array_length = images.length - 1;
-  var updated_image = images[i];
-  var updated_text = names[i];
+  var count = 0;
 
-  document.getElementById("family_book_image").src = updated_image;
-  document.getElementById("name").innerHTML = updated_text;
+  function nextslide () {
 
-  i++;
+  document.getElementById("members").src = members[count];
 
+  document.getElementById("names").innerHTML = names[count];
+  
+  count++;
 
-  if(i>array_length){
-  i = 0;
-                
+  if (count == 6) {
+  
+  count = 0;
+
+  }
+
   }
